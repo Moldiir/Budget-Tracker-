@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бюджетный трекер</title>
+    <link rel="stylesheet" href="m.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Левая панель -->
+        <div class="left-panel">
+            <h1>Трекер бюджета</h1>
+            <div>
+                <h2>Текущий бюджет: <span id="current-balance">0</span> тг</h2>
+            </div>
+            <div>
+                <label for="limit">Лимит расходов:</label>
+                <input type="number" id="limit" placeholder="Укажите лимит" />
+                <button id="set-limit">Установить лимит</button>
+            </div>
+            <div id="progress-bar-container">
+                <div id="progress-bar"></div>
+            </div>
+            <div>
+                <input type="number" id="amount" placeholder="Сумма" />
+                <button id="add-income">Добавить доход</button>
+                <button id="add-expense">Добавить расход</button>
+            </div>
+            <div>
+                <label for="category">Категория расхода:</label>
+                <select id="category">
+                    <option value="Продукты">Продукты</option>
+                    <option value="Транспорт">Транспорт</option>
+                    <option value="Развлечения">Развлечения</option>
+                    <option value="Услуги">Услуги</option>
+                    <option value="Другие">Другие</option>
+                </select>
+            </div>
+        </div>
+        <!-- Правая панель -->
+        <div class="right-panel">
+            <div>
+                <h2>История транзакций</h2>
+                <ul id="transaction-list"></ul>
+            </div>
+            <div>
+                <h2>Расходы по категориям</h2>
+                <canvas id="expenses-chart"></canvas>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="m.js"></script>
+
+</body>
+</html>
